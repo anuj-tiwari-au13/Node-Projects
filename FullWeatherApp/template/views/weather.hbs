@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {{>headSection}}
+</head>
+
+<body>
+    <!-- HEADER SECTION -->
+    {{>navbar}}
+
+    <!-- HERO SECTION -->
+
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/bg1.PNG" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/bg2.PNG" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/bg3.PNG" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/bg4.PNG" alt="Fourth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/bg5.jpg" alt="Fifth slide">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center mt-16">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">ENTER A CITY NAME</h1>
+
+                <div class="flex w-full justify-center items-end">
+                    <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                        <form class="temp_form">
+                            <input type="text" id="cityName" placeholder="Enter your city name" autocomplete="off"
+                                class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            <input
+                                class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                                type="submit" value="search" id="submitBtn">
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <!-- component -->
+        <div class="p-10 ">
+
+            <div class="tempInformation   max-w-sm rounded overflow-hidden shadow-lg mx-auto">
+                <p class="text-6xl text-gray-700 text-base font-semibold" id="temp_status"></p>
+                <img id="temp_status_img" class="w-full" src="/images/bg3.png" alt="Mountain">
+
+                <div class="main-layer px-2 py-4">
+
+                    <p id="city_name" class="text-6xl text-gray-700 text-base font-semibold"> </p>
+
+
+                    <div class="middle_layer ml-20 px-6 py-4 ">
+
+
+                        <p id="temp" class="font-sans text-8xl text-gray-700 font-semibold ">
+                            <a> &#176;C</a>
+
+
+
+                        </p>
+
+
+
+                        {{!-- <h1></h1> --}}
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- FOOTER SECTION -->
+    {{>footer}}
+
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

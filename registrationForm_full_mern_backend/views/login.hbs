@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <!-- Tailwinds CSS CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- NAVBAR SECTION -->
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">REGISTRATION</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a href="/" class="mr-5 hover:text-gray-900">Home</a>
+                <a href="/login" class="mr-5 hover:text-gray-900">Login</a>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+
+    <!-- HERO SECTION -->
+    <div class="w-full h-screen bg-center bg-no-repeat bg-cover"
+        style="background-image: url('https://images.unsplash.com/photo-1609342475528-dd7d93e8311e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80');">
+        <div class="w-full h-screen bg-opacity-50 bg-black flex justify-center items-center">
+            <div class="mx-4 text-center text-white">
+                <h1 class="font-bold text-6xl mb-4">REGISTRATION FORM USING HTML, CSS, NODE, EXPRESS, TEMPLATE ENGINE,
+                    MONGODB</h1>
+                <h2 class="font-bold text-3xl mb-12">A COMPLETE MERN BACKEND </h2>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN FORM FORM -->
+    <div class="font-sans min-h-screen antialiased bg-gray-900 pt-24 pb-5">
+        <div class="flex flex-col justify-center sm:w-96 sm:m-auto mx-5 mb-5 space-y-8">
+            <h1 class="font-bold text-center text-4xl text-yellow-500">My<span class="text-blue-500">App</span></h1>
+            <form action="/login" method="POST">
+                <div class="flex flex-col bg-white p-10 rounded-lg shadow space-y-6">
+                    <h1 class="font-bold text-xl text-center">Sign in to your account</h1>
+
+                    <div class="flex flex-col space-y-1">
+                        <input type="email" name="email" id="username"
+                            class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow"
+                            placeholder="Email" required />
+                    </div>
+
+                    <div class="flex flex-col space-y-1">
+                        <input type="password" name="password" id="password"
+                            class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow"
+                            placeholder="Password" required />
+                    </div>
+
+
+
+                    <div class="flex flex-col-reverse sm:flex-row sm:justify-between items-center">
+                        <a href="#" class="inline-block text-blue-500 hover:text-blue-800 hover:underline">Forgot your
+                            password?</a>
+                        <button type="submit"
+                            class="bg-blue-500 text-white font-bold px-5 py-2 rounded focus:outline-none shadow hover:bg-blue-700 transition-colors">Log
+                            In</button>
+                    </div>
+                </div>
+            </form>
+            <div class="flex justify-center text-gray-500 text-sm">
+                <p>&copy;2021. All right reserved.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

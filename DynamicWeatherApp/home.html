@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time WeatherApp</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 ">
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -m-4">
+
+
+
+                <div class="h-full border-2 border-black border-opacity-60 rounded-lg overflow-hidden  mx-auto font-extrabold text-gray font-mono">
+                    <img id="weathercon" src="sun.gif" alt="sunny weather">
+                    <div class="mx-16 ">
+
+
+
+
+                        <!-- from font Awesome -->
+
+
+
+                        <h2 class="location text-2xl text-white font-mono  p-2">
+                            <i class=" animate-bounce fas fa-street-view"></i> {%location%}, {%country%}   </h2>
+
+
+
+                     
+                        <p class="text-sm p-2 ml-10" id="date"> WED | OCT 23 | 10:49AM</p>
+                        <h1 class="temp text-xl p-2 ml-10">{%tempval%}&deg;C </h1>
+
+
+
+                            
+                       
+                        <h3 class="tempmin_max text-sm p-2 ml-10"> Min Temp   {%tempmin%}&deg;C  | Max Temp   {%tempmax%}&deg;C  </h3>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script>
+        const curDate = document.getElementById("date");
+        const weatherCondition = document.getElementById("weathercon");
+        const tempStatus = "{%tempstatus%}";
+
+
+        if(tempStatus == "Sunny"){
+            weatherCondition.setAttribute("src","https://images.unsplash.com/photo-1581224463294-908316338239?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3VufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60") ;
+        }
+        else 
+        if(tempStatus == "Clouds"){
+            weatherCondition.setAttribute("src","https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2xvdWRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60") ;
+        }
+        else 
+        if(tempStatus == "Rainy"){
+            weatherCondition.setAttribute("src","https://images.unsplash.com/photo-1501691223387-dd0500403074?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFpbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60") ;
+        }
+        else 
+       {
+        weatherCondition.setAttribute("src","weather.png") ;
+        }
+
+
+
+        // for date and time string
+        let currentTime = new Date().toLocaleString();
+        console.log(currentTime);
+        curDate.innerHTML = currentTime;
+    </script>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

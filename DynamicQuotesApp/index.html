@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Web App</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 mx-auto">
+        <div class="flex justify-center md:justify-end -mt-16">
+            <img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80">
+        </div>
+        <div>
+
+            <p id="quotes" class="mt-2 text-gray-600 font-bold"></p>
+        </div>
+        <div class=" mt-4">
+            <p id="author" class="mt-2 text-gray-600 font-thin"></p>
+        </div>
+        <div class="my-5">
+            <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" id="newQ">New Quote</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="tweetMe">Tweet Now</button>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const quotes = document.getElementById('quotes');
+        const author = document.getElementById('author');
+        const newQ = document.getElementById('newQ');
+        const tweetMe = document.getElementById('tweetMe');
+
+
+
+
+        let realData = "";
+        let quotesData = "";
+
+
+        const tweetNow = () => {
+            console.log(quotesData)
+            let tweetPost = `https://twitter.com/intent/tweet?text=${quotesData.text} ${quotesData.author}`;
+            window.open(tweetPost);
+
+        }
+
+
+        const getNewQuotes = () => {
+            let rnum = Math.floor(Math.random() * 20);
+            quotesData = realData[rnum];
+            quotes.innerText = `${realData[rnum].text}`;
+
+            if (realData[rnum].author == null) {
+                author.innerText = "unknown";
+            } else {
+                author.innerText = `${realData[rnum].author}`;
+            }
+
+        };
+
+        const getQuotes = async() => {
+            try {
+
+                // jab tak humein api se data nahi mil jaata, hum log wait kar rahe the and 
+                //the moment data milta hai 
+                //hum usko store kar rahe hain data mein . 
+
+                let data = await fetch("http://type.fit/api/quotes");
+                //console.log(data);
+                // we get output as a readable stream , whenever this happens 
+                // convert it into JSON
+
+                //console.log(data.json());
+                // now we will see a promise
+
+                realData = await data.json();
+                getNewQuotes();
+                // console.log(realData);
+
+
+
+
+
+
+            } catch (error) {
+
+            }
+
+
+
+
+
+
+        };
+
+
+
+
+
+        tweetMe.addEventListener('click', tweetNow);
+        newQ.addEventListener('click', getNewQuotes);
+
+
+        getQuotes();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+    "name": "dynamicweatherapp",
+    "version": "1.0.0",
+    "description": "Dynamic Weather App Using RealTime API with HTML and NODE.JS\r API we are using is ---> Open Weather global services.\r         ---> create acc and login. \r                 -----> email - pahaadiengineer \r                 -----> passs - Anujtiwari@1\r                 -----> username : itsanujtiwari\r         ----> API key  : 00a81f2bee5fa98eb421638ae616ea1f\r         ----> API url : api.openweathermap.org/data/2.5/weather?q=Pune&appid=00a81f2bee5fa98eb421638ae616ea1f",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+
+    },
+    "author": "ANUJ TIWARI",
+    "license": "ISC",
+    "dependencies": {
+        "requests": "^0.3.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}

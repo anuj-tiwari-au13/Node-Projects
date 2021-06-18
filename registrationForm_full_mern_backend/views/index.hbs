@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <!-- Tailwinds CSS CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- NAVBAR SECTION -->
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">REGISTRATION</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a href="/" class="mr-5 hover:text-gray-900">Home</a>
+                <a href="/login" class="mr-5 hover:text-gray-900">Login</a>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+
+    <!-- HERO SECTION -->
+    <div class="w-full h-screen bg-center bg-no-repeat bg-cover"
+        style="background-image: url('https://images.unsplash.com/photo-1609342475528-dd7d93e8311e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80');">
+        <div class="w-full h-screen bg-opacity-50 bg-black flex justify-center items-center">
+            <div class="mx-4 text-center text-white">
+                <h1 class="font-bold text-6xl mb-4">REGISTRATION FORM USING HTML, CSS, NODE, EXPRESS, TEMPLATE ENGINE,
+                    MONGODB</h1>
+                <h2 class="font-bold text-3xl mb-12">A COMPLETE MERN BACKEND </h2>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <form action="/" method="POST">
+        <div class="bg-grey-lighter min-h-screen flex flex-col">
+            <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+                <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+                    <h1 class="mb-8 text-3xl text-center">Sign up</h1>
+                    <input type="text" class="block border border-grey-light w-full p-3 rounded mb-4" name="fullname"
+                        placeholder="Full Name" />
+
+                    <input type="text" class="block border border-grey-light w-full p-3 rounded mb-4" name="email"
+                        placeholder="Email" />
+
+                    <input type="password" class="block border border-grey-light w-full p-3 rounded mb-4"
+                        name="password" placeholder="Password" />
+                    <input type="password" class="block border border-grey-light w-full p-3 rounded mb-4"
+                        name="confirmpassword" placeholder="Confirm Password" />
+                    <input type="text" class="block border border-grey-light w-full p-3 rounded mb-4" name="about"
+                        placeholder="About" />
+                    {{!-- <input type="text" class="block border border-grey-light w-full p-3 rounded mb-4" name="age"
+                        placeholder="Age" /> --}}
+
+                      
+                <label for="image">Upload Image</label>
+                <input type="file" id="image"
+                       name="profilepic" value="" required>
+           
+
+                    {{!-- <div class="mt-4">
+
+                        <div class="mt-2 text-gray-400">
+                            <label class="inline-flex items-center">
+                                <input type="radio" class="form-radio" name="gender" value="personal">
+                                <span class="ml-2">Male</span>
+                            </label>
+                            <label class="inline-flex items-center ml-6">
+                                <input type="radio" class="form-radio" name="gender" value="busines">
+                                <span class="ml-2">Female</span>
+                            </label>
+                        </div>
+                    </div> --}}
+
+                    {{!-- <label class="block mt-4">
+
+                        <select name="city" class="form-select mt-1 block w-full text-gray-400">
+                            <option disabled>Enter City Name </option>
+                            <option>Delhi</option>
+                            <option>Mumbai</option>
+                            <option>Bangalore</option>
+                            <option>Chennai</option>
+                            <option>Others</option>
+                        </select>
+                    </label> --}}
+
+                    <button type="submit"
+                        class="ml-24 mt-4 focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-gradient-to-r from-green-400 to-green-600 transform hover:scale-110">Register</button>
+
+
+                    <div class="text-center text-sm text-grey-dark mt-4">
+                        By signing up, you agree to the
+                        <a class="underline border-b border-grey-dark text-blue-dark" href="#">
+                            Terms of Service
+                        </a> and
+                        <a class="underline border-b border-grey-dark text-green-dark" href="#">
+                            Privacy Policy
+                        </a>
+                    </div>
+                </div>
+    </form>
+
+    <div class="text-grey-dark mt-6">
+        Already have an account?
+        <a class="no-underline  border-blue text-red-500 text-xl" href="/login">
+            Log in
+        </a>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

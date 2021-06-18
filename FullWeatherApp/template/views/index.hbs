@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {{>headSection}}
+</head>
+
+<body>
+    <!-- HEADER SECTION -->
+    {{>navbar}}
+
+    <!-- HERO SECTION -->
+
+    <section class="text-gray-600 body-font mt-4 ">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center mx-6">
+
+                <p class="mb-4 leading-relaxed text-red-600  font-semibold">WEATHER FORECAST</p>
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">TRACK <span
+                        class="text-blue-500">WEATHER</span> OF YOUR CITY</h1>
+
+
+
+                <div class="flex justify-center">
+                    <a href="/weather"> <button
+                            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Check
+                            Now</button></a>
+
+                </div>
+            </div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/bg1.PNG" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/bg2.PNG" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/bg3.PNG" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/bg4.PNG" alt="Fourth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/bg5.jpg" alt="Fifth slide">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER SECTION -->
+    {{>footer}}
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "backendmern",
+  "version": "1.0.0",
+  "description": "registration form using html, css, node, express, mongo, i.e. a complete MERN Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js -e js, hbs"
+  },
+  "author": "anuj tiwari",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.5",
+    "multer": "^1.4.2"
+  }
+}
